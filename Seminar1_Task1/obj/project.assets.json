@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GeekBrains\\3. Знакомство с языками программирования С#\\C#\\Seminar\\Seminar1\\Task1\\Task1.csproj",
+      "projectUniqueName": "D:\\GeekBrains\\3. Знакомство с языками программирования С#\\C#\\Seminar\\Seminar1\\Seminar1_Task1\\Task1.csproj",
       "projectName": "Task1",
-      "projectPath": "D:\\GeekBrains\\3. Знакомство с языками программирования С#\\C#\\Seminar\\Seminar1\\Task1\\Task1.csproj",
+      "projectPath": "D:\\GeekBrains\\3. Знакомство с языками программирования С#\\C#\\Seminar\\Seminar1\\Seminar1_Task1\\Task1.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\GeekBrains\\3. Знакомство с языками программирования С#\\C#\\Seminar\\Seminar1\\Task1\\obj\\",
+      "outputPath": "D:\\GeekBrains\\3. Знакомство с языками программирования С#\\C#\\Seminar\\Seminar1\\Seminar1_Task1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
