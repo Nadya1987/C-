@@ -79,3 +79,87 @@ quad = number * number;
 
 Console.Write("Квадрат числа равен " + quad);
 */
+
+Семинар2
+
+/*int CutNumber()
+{
+    int num = new Random().Next(100,1000);
+    Console.WriteLine("Current random number is " + num);
+
+    int sotni = num / 100;
+    int ed = num % 10;
+
+    int result = sotni * 10 + ed;
+    return result;
+}
+
+
+int number = CutNumber();
+Console.WriteLine ("Result number is " + number);
+
+
+void CutNumber()
+{
+    int num = new Random().Next(100,1000);
+    Console.WriteLine("Current random number is " + num);
+
+    int sotni = num / 100;
+    int ed = num % 10;
+
+    int result = sotni * 10 + ed;
+    Console.WriteLine ("Result number is " + result);
+    }
+
+CutNumberVoid (num) */
+
+//2
+/*int MaxNumber()
+{
+    int num = new Random().Next(10,100);
+    Console.WriteLine("Current random number is: " + num);
+
+    int dec = num % 10;
+    int ed = num / 10;
+
+    if (dec > ed)
+        return dec;
+    else
+        return ed;
+}
+
+int res = MaxNumber();
+Console.Write(res);
+*/
+
+//3
+/*void Crat()
+{
+    int num = new Random().Next();
+    Console.WriteLine("Current random number is: " + num);
+
+    if(num % 7 == 0)
+    {
+        if(num % 23 == 0)
+        {
+            Console.WriteLine("Число является кратным 7 и 23");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Число не является кратным 7 и 23");
+    }
+}
+Crat();*/
+
+//4
+/*void IsQuad(int num1, num2)
+{
+   int quad2 = num2 * num2;
+   int quad1 = num1 * num1;
+
+    if (num1 == quad2)
+        Console.WriteLine("Yes");
+    else
+        Console.WriteLine("No");
+}*/
