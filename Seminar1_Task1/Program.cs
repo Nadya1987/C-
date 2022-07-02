@@ -163,3 +163,65 @@ Crat();*/
     else
         Console.WriteLine("No");
 }*/
+
+
+    
+    
+
+
+Семинар 3
+    
+    Task 1 
+    void ShowArea(int quart)
+
+{
+    if(quart >= 1 && quart <= 4)
+    {
+        if(quart == 1) Console.WriteLine("In this quart x > 0 and y > 0");
+        if(quart == 2) Console.WriteLine("In this quart x < 0 and y > 0");
+        if(quart == 3) Console.WriteLine("In this quart x < 0 and y < 0");
+        if(quart == 4) Console.WriteLine("In this quart x > 0 and y < 0");
+    }
+    else
+        Console.WriteLine("This number is uncorrect");
+}
+
+Console.Write("Input number of quart: ");
+int numQuart = Convert.ToInt32(Console.ReadLine());
+
+ShowArea(numQuart);
+    
+    Task2
+    /* int ShowQuart (int x, int y) 
+{ 
+        int result = -1; 
+
+        if (x > 0 && y > 0) result = 1; 
+        if (x < 0 && y > 0) result = 2; 
+        if (x < 0 && y < 0) result = 3; 
+        if (x > 0 && y < 0) result = 4; 
+        return result; 
+}   
+
+Console.WriteLine("Введите координату x: "); 
+int x0 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите координату y: "); 
+int y0 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine(ShowQuart(x0, y0));  
+
+*/  Task 3
+
+void Quad(int x) 
+{ 
+     int current = 1; 
+     while (current <= x) 
+     { 
+        int quad = current * current; 
+        Console.Write(quad + " "); 
+        current++; 
+     } 
+} 
+
+Console.WriteLine("Введите число: "); 
+int n = Convert.ToInt32(Console.ReadLine()); 
+Quad(n); 
