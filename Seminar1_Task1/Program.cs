@@ -225,3 +225,85 @@ void Quad(int x)
 Console.WriteLine("Введите число: "); 
 int n = Convert.ToInt32(Console.ReadLine()); 
 Quad(n); 
+
+//1. Напишите программу, которая принимает на вход число (А) 
+//и выдаёт сумму чисел от 1 до А.
+
+ /*int FindSum(int a)
+{
+    int sum = 0;
+
+    for(int current = 1; current <=a; current++)
+        sum += current; //sum = sum + current
+        
+        return sum; 
+
+}
+
+Console.Write("Input positive integer number");
+int num = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Sum of numbers from 1 to {num} is {FindSum(num)}"); //$ - форматирование, модернизировать формат. 
+Берет все что в фигурных скобках и воспроизводит в качестве чисел*/
+
+
+
+
+//2. Напишите программу, которая принимает на вход число и выдаёт 
+//количество цифр в числе.
+/*int Numbers(int a)
+{
+    int current = 0;
+    if(current <= a)
+    {
+        while(a > 0)
+        {
+        a = a / 10;
+        current++;
+        }
+    }
+    return current;
+
+}
+
+Console.WriteLine("Введите число: ");
+int numkol = Convert.ToInt32(Console.ReadLine());
+int numb = Numbers(numkol);
+Console.WriteLine(numb);*/
+
+//3.Напишите программу, которая принимает на вход число N и выдаёт 
+//произведение чисел от 1 до N.
+/* void Factorial(int num) 
+{
+
+     int current = 1;
+     int fact = 1;
+     while (current <= num) 
+     {
+        int a = current; 
+        fact = fact * a;
+        current++;      
+     }
+     Console.WriteLine(fact);
+} 
+
+Console.WriteLine("Введите число: "); 
+int number = Convert.ToInt32(Console.ReadLine()); 
+Factorial(number);*/
+
+//4. Напишите программу, которая принимает на вход два числа (A и B) 
+//и возводит число A в натуральную степень B.
+
+int Step(int num1, int num2)
+{ 
+     int result = 1;
+     for(int i = 1; i <= num2; i++)
+        result = result * num1;
+     return result;
+} 
+
+Console.Write("Введите первое число: "); 
+int number1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: "); 
+int number2 = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine(Step(number1, number2));
