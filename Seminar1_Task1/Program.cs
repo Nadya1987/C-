@@ -354,6 +354,8 @@ Console.WriteLine("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine()); 
 Quad(n); 
 
+Семинар 4
+
 //1. Напишите программу, которая принимает на вход число (А) 
 //и выдаёт сумму чисел от 1 до А.
 
@@ -435,3 +437,134 @@ int number1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: "); 
 int number2 = Convert.ToInt32(Console.ReadLine()); 
 Console.WriteLine(Step(number1, number2));
+
+
+Семинар 5
+    //Задача Задайте массив из 12 элементов, заполненный случайными 
+//числами из промежутка [-9, 9]. Найдите сумму 
+//положительных элементов массива.
+
+//метод генерируется автоматически:
+/*int[] CreateRandomArray(int size, int minValue, int maxValue) // квадратные скобки [] нужны всегда при работе массива
+{
+    int[] newArray = new int[size]; // инициалиирует массив new Array
+
+    for(int i = 0; i < size; i++)
+        newArray[i] = new Random().Next(minValue, maxValue+1);// всегда ставится +1, т.к. в массиве сокращается количество на 1
+
+    return newArray;
+}
+
+// метод, который подойдет для чисел, которые вводит пользователь
+int[] CreateArray(int size)
+{
+    int[] newArray = new int [size];
+
+    Console.WriteLine("Creating array here: ");
+    for(int i = 0; i< size; i++)
+    {
+        Console.Write($"Input{i + 1} element: "); // i+1 - чтоб визуально для пользователя выглядело аккуратно. с т.з интерфейса
+        newArray[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    Console.WriteLine();
+    return newArray;
+}
+
+//массив который ничего не отображает
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++) // array.Length - длина массива
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine();
+}
+
+int FindPositiveSum(int[] array)
+{
+    int sum = 0;
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] > 0) sum += array [i];
+
+    return sum;
+}
+
+Console.Write("Input size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input min possible value of elements: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value of elements: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] array = CreateRandomArray(size, min, max);
+ShowArray(array);
+int sumOfPositive = FindPositiveSum(array);
+Console.WriteLine("Sum of positive elements in current array is " + sumOfPositive);
+*/
+
+//Задача 1. Напишите программу замена элементов массива:
+// положительные элементы замените на соответствующие 
+//отрицательные, и наоборот.
+
+int[] CreateRandomArray(int size, int minValue, int maxValue)
+{
+    int[] newArray = new int[size]; 
+
+    for(int i = 0; i < size; i++)
+        newArray[i] = new Random().Next(minValue, maxValue+1);
+
+    return newArray;
+}
+
+int[] Otric(int[] newArray)
+{
+    for(int i = 0; i < newArray.Length; i++)
+    newArray[i] = newArray[i] * -1;
+
+    return newArray;
+}
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine();
+}
+
+Console.Write("Input size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input min possible value of elements: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value of elements: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] array = CreateRandomArray(size, min, max);
+ShowArray(array);
+int[] otric2 = Otric(array);
+ShowArray(otric2);
+
+
+
+//Задача 2. Задайте одномерный массив из 20 случайных чисел. 
+//Найдите количество элементов массива, значения которых 
+//лежат в отрезке [10,99].
+
+/*int FindTwoDigits(int[] array)
+{
+    int count = 0;
+
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] >= 10 && array[i] <= 99) count++;
+
+    return count;
+}
+
+int size = 20;
+Console.Write("Input min possible value of elements: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value of elements: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] array = CreateRandomArray(size, min, max);
+ShowArray(array);
+Console.WriteLine("Count of two-digit elements is" + FindTwoDigits(array));*/
