@@ -568,3 +568,120 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] array = CreateRandomArray(size, min, max);
 ShowArray(array);
 Console.WriteLine("Count of two-digit elements is" + FindTwoDigits(array));*/
+
+
+СЕМИНАР 6
+    //Напишите программу, которая перевернёт 
+//одномерный массив (последний элемент 
+//будет на первом месте, а первый - на последнем 
+//и т.д.)
+
+/*int[] ReverseArray(int[] array)
+
+{   // с циклом for
+    for(int i = 0, j = array.Length - 1;  i < array.Length / 2; i++, j--)
+    {
+      int temp = array[i]; 
+      array[i] = array[j];
+        array[j] = temp;
+    }*/
+    //c циклом while
+
+    /*int i = 0, j = array.Length - 1;
+    while(i < j)
+    {
+        int temp = array[i]; 
+        array[i] = array[j];
+        array[j] = temp;
+        
+        i++;
+        j--;
+    }*/
+    /*return array;
+}
+
+int[] myArray = {3, 5, 1, 8, 2, 9, 4};
+myArray = ReverseArray(myArray);
+
+for(int i = 0; i < myArray.Length; i++)
+    Console.Write(myArray[i] + " ");*/
+
+//Напишите программу, которая будет преобразовывать 
+//десятичное число в двоичное. 
+/*18/2=9 0
+9/2=4 1
+4/2=2 0
+2/2=1 0
+1/2=0 1   18 10010*/
+/*
+string ChangeDigitSystem(int num)
+{
+    string resultNumber = string.Empty;
+
+    while(num > 0)
+    {
+        resultNumber = num % 2 + resultNumber;
+        num /=2; // то же самое, что и  num = num/2;
+    }
+    return resultNumber;
+}
+Console.WriteLine(ChangeDigitSystem(18));*/
+
+// 1 Напишите программу, которая принимает на вход 
+//три числа и проверяет, может ли существовать треугольник 
+//с сторонами такой длины. a < b + c
+/*
+void Triangle(int a, int b, int c)
+{
+    if(a < b + c && b < a + c && c < b + a)
+        Console.WriteLine("Треугольник существует! ");
+    else
+        Console.WriteLine("Это не треугольник");
+}
+
+int a = 1;
+int b = 2;
+int c = 3;
+
+Triangle(a,b,c);*/
+
+// тип bool
+/*
+bool Triangle(int a, int b, int c) // c 1.28
+{
+    return a < b + c && b < a + c && c < b + a;
+}
+bool isTriangle = false;
+isTriangle = Triangle(1,2,2);
+
+Console.WriteLine(isTriangle);*/
+
+
+
+// 2 Не используя рекурсию, выведите первые N чисел 
+//Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++) // array.Length - длина массива
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine();
+}
+
+int[] Fibonacci(int num)
+{
+    int[] newArray = new int[num];
+    Console.WriteLine("Create array here: ");
+    newArray[0] = 0;
+    newArray[1] = 1;
+    for(int i = 2; i < num; i++)
+    {
+        newArray[i] = (newArray[i - 1]) + (newArray[i -2]);
+    }
+    return newArray;
+}
+
+Console.WriteLine("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+ShowArray(Fibonacci(num));
