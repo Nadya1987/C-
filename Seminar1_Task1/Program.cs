@@ -1061,3 +1061,99 @@ int[,] myArray = CreateRandom2dArray(m, n, min, max);
 /*Show2dArray(myArray);*/
 Show2dArray(Cut2dArray(myArray));
 
+
+
+Семинар 9
+    //Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// рекурсия выводит на экран 12345
+/*
+void ShowNums(int n)
+{
+    if (n > 1)
+        ShowNums(n - 1);
+    Console.Write(n + " ");
+}
+
+ShowNums(5);
+
+//(5) -> (4) -> (3) -> (2)-> (1) -> (2) -> (3) -> (4) -> (5)
+
+// рекурсия выводит на экран 543212345
+void ShowNums(int n)
+{
+    if(n > 1)
+    {
+        Console.Write(n + " ");
+        ShowNums(n - 1);
+    }
+        
+    Console.Write(n + " ");
+}
+
+ShowNums(5);*/
+
+
+//Задача 2 Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+/*
+void ShowNums(int n)
+{
+    if (n > 1)
+        ShowNums(n - 1);
+    Console.Write(n + " ");
+}
+
+int SumOfDigits(int n)
+{
+    if(n >= 10)
+    {
+        return n % 10 + SumOfDigits(n / 10);
+    }
+    else return n;
+
+}
+
+ShowNums(5);
+Console.WriteLine();
+Console.WriteLine(SumOfDigits(12345));
+
+// n / 10 = 12345 -> 1234 -> 123 -> 12 -> 1
+//Остаток от деления (%) = 5 + 4 + 3 + 2 + 1*/
+
+
+//Задача 3 Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+/*
+void ShowNums(int m, int n)
+{
+    if (n > m)
+    {
+        ShowNums(m,n-1);
+        Console.Write(n + " ");
+    }
+    else Console.Write(m + " ");
+}
+Console.WriteLine("Input min number: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input max number: ");
+int max = Convert.ToInt32(Console.ReadLine());
+ShowNums(min, max);*/
+
+
+
+
+//Задаа 4 Напишите программу, которая на вход принимает два числа A и B, и возводит число А  в целую степень B с помощью рекурсии
+
+
+int Stepen(int a, int b)
+{
+    if(b > 1)
+    {
+        return a * Stepen(a, b-1);
+    }
+    else return a;
+}
+Console.WriteLine("Input a number: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input b number: ");
+int b = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Stepen(a, b));
